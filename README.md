@@ -2,7 +2,9 @@
 
 > 在发出问卷之前，先看见可能的回答。
 
-[![CI](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml) [![Python](https://img.shields.io/badge/Python-3.10%2B-3670a0)](#本地运行) [![License](https://img.shields.io/badge/license-MIT-22a06b)](LICENSE) [![Data](https://img.shields.io/badge/demo%20data-100%25%20fictional-ef9e59)](#数据与研究边界)
+[![CI](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml) [![Python](https://img.shields.io/badge/Python-3.10%2B-3670a0)](#30-秒运行) [![License](https://img.shields.io/badge/license-MIT-22a06b)](LICENSE) [![Data](https://img.shields.io/badge/demo%20data-100%25%20fictional-ef9e59)](#数据与研究边界)
+
+**[立即体验在线演示 →](https://camel666666.github.io/respondent-lab/)** · [查看英文介绍](README_EN.md)
 
 Respondent Lab 是开源的**问卷预实验工具**。你可以按大学生和社会人士设置样本配额，运行模拟问卷，查看回答分布、分组差异和报告初稿。它适合课堂教学、题目预测试、研究假设探索，也能帮助团队在正式招募受访者前发现问卷设计问题。
 
