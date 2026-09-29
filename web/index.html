@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Respondent Lab · 问卷实验室</title>
+  <meta name="description" content="分层抽样、模拟问卷、查看分组差异。透明的合成受访者实验台。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="filters.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="Respondent Lab 首页"><span class="brand-mark">R<span class="brand-dot">.</span></span><span><strong>Respondent Lab</strong><small>问卷实验室</small></span></a>
+      <div class="side-label">工作区</div>
+      <nav aria-label="主导航">
+        <a class="nav-item active" href="#overview"><span>▦</span> 实验概览</a>
+        <a class="nav-item" href="#sample"><span>◎</span> 样本设计</a>
+        <a class="nav-item" href="#results"><span>▥</span> 结果分析</a>
+        <a class="nav-item" href="#method"><span>◇</span> 方法说明</a>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> 1000 位演示受访者<br><small>500 大学生 · 500 社会人士</small></div>
+    </aside>
+
+    <main id="top">
+      <header class="topbar"><span>工作区 <span class="crumb">/</span> 实验概览</span><div class="top-actions"><span class="demo-badge">演示模式</span><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub ↗</a></div></header>
+      <div class="content">
+        <section id="overview" class="hero">
+          <div class="hero-copy"><div class="eyebrow"><span class="sparkle">✦</span> 让问卷设计先经历一次彩排</div><h1>在发出问卷之前，<br><em>先看见可能的回答。</em></h1><p>按人群组合样本，运行透明的模拟调查，快速发现选项偏差、题目盲区与值得追问的问题。</p><div class="hero-actions"><a class="button primary" href="#sample">开始设计样本 <span>→</span></a><button class="button ghost" id="load-demo">查看演示结果</button></div></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="float-card card-a"><span class="mini-avatar purple">学</span><span>本科生<br><small>学习工具 · 华东</small></span></div><div class="float-card card-b"><span class="mini-avatar orange">职</span><span>技术岗位<br><small>职业发展 · 华南</small></span></div><div class="pulse-core"><span>1000</span><small>模拟受访者</small></div></div>
+        </section>
+
+        <div class="notice" role="status"><span>ⓘ</span><p><strong>这是一项模拟调查。</strong> 演示人物完全虚构；导入经授权真人资料后，数字分身的回答仍是模型推测，不能作为真人实地调查结果。</p></div>
+
+        <section class="section" id="sample"><div class="section-heading"><div><span class="section-kicker">01 / SAMPLE</span><h2>设计你的样本</h2><p>选择群体与配额，明确这次预实验想观察什么。</p></div><span class="section-tag">分层抽样</span></div>
+          <div class="sample-grid"><div class="panel sample-panel"><div class="panel-title"><span>样本配比</span><span class="light-label">总计 <strong id="total-sample">200</strong> 人</span></div><div class="sample-row"><div class="sample-icon student">🎓</div><div class="sample-text"><strong>大学生</strong><small>专业、年级、学历</small></div><div class="stepper"><button type="button" data-step="student:-25" aria-label="减少大学生人数">−</button><output id="student-count">100</output><button type="button" data-step="student:25" aria-label="增加大学生人数">+</button></div></div><div class="sample-row"><div class="sample-icon worker">💼</div><div class="sample-text"><strong>社会人士</strong><small>行业、岗位、工作年限</small></div><div class="stepper"><button type="button" data-step="working_adult:-25" aria-label="减少社会人士人数">−</button><output id="worker-count">100</output><button type="button" data-step="working_adult:25" aria-label="增加社会人士人数">+</button></div></div><div class="subgroup-filters"><label>学生专业<select id="major-filter"><option value="">全部专业</option><option>计算机</option><option>经济</option><option>医学</option><option>法学</option><option>教育</option><option>工学</option><option>文学</option><option>艺术</option><option>管理</option><option>理学</option></select></label><label>社会行业<select id="industry-filter"><option value="">全部行业</option><option>互联网</option><option>金融</option><option>医疗</option><option>教育</option><option>制造</option><option>零售服务</option><option>公共部门</option></select></label></div><div class="quota-bar" aria-label="样本配比"><span id="student-bar"></span><span id="worker-bar"></span></div><div class="quota-legend"><span><i class="legend-dot student-dot"></i>大学生 <b id="student-share">50%</b></span><span><i class="legend-dot worker-dot"></i>社会人士 <b id="worker-share">50%</b></span></div></div>
+          <div class="panel question-panel"><div class="panel-title"><span>示例问卷</span><span class="light-label">4 道题 · 教学演示</span></div><p class="question-intro">校园与日常工具需求探索</p><div class="question-list"><div><span>01</span>你通常通过什么方式记录待办事项？<small>单选</small></div><div><span>02</span>你最在意工具的哪些方面？<small>多选</small></div><div><span>03</span>你对当前使用的工具整体满意吗？<small>量表</small></div><div><span>04</span>如果可以改进一处，你希望改进什么？<small>开放</small></div></div><button class="button primary run-button" id="simulate">运行本地演示 <span>→</span></button></div></div>
+        </section>
+
+        <section class="section" id="results"><div class="section-heading"><div><span class="section-kicker">02 / INSIGHTS</span><h2>看见回答的形状</h2><p id="result-subtitle">本地演示显示方法流程；导入命令行结果可查看完整模拟调查。</p></div><label class="import-button">导入结果 JSON <input type="file" id="file-input" accept=".json,application/json"></label></div>
+          <div class="metric-grid"><div class="metric"><span>模拟样本</span><strong id="metric-count">200</strong><small>按设定配额抽取</small></div><div class="metric"><span>群体分组</span><strong>02</strong><small>大学生 · 社会人士</small></div><div class="metric"><span>问卷题目</span><strong id="metric-questions">04</strong><small>单选 / 多选 / 量表 / 开放</small></div><div class="metric accent"><span>结果性质</span><strong>模拟</strong><small>不可冒充真人调查</small></div></div>
+          <div class="analysis-grid"><div class="panel chart-panel"><div class="panel-title"><span id="chart-title">你通常通过什么方式记录待办事项？</span><span class="light-label">回答分布</span></div><div id="chart" class="chart" aria-live="polite"></div><div class="chart-footnote">数据来自演示规则或导入结果；比例不代表真实人群。</div></div><div class="panel insights-panel"><div class="panel-title"><span>实验提示</span><span class="hint-icon">✦</span></div><div class="insight"><span>01</span><p>先检查选项是否覆盖常见行为，再决定是否正式发放。</p></div><div class="insight"><span>02</span><p>观察不同分组的差异，但不要把模拟差异解释为真实结论。</p></div><div class="insight"><span>03</span><p>使用少量真人预测试，对模型假设进行校准。</p></div></div></div>
+        </section>
+
+        <section class="method" id="method"><div><span class="section-kicker">03 / METHOD</span><h2>每一步都可追溯</h2></div><div class="method-steps"><div><b>01</b><strong>设计样本</strong><span>明确分组和配额</span></div><div><b>02</b><strong>模拟回答</strong><span>固定随机种子，可重复运行</span></div><div><b>03</b><strong>分析差异</strong><span>导出 JSON 与报告</span></div><div><b>04</b><strong>真人验证</strong><span>用实际预测试修正假设</span></div></div></section>
+        <footer>Respondent Lab · 开源问卷预实验工具 <span>所有演示结果均为合成数据</span></footer>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "title": "课程问卷预实验：学习工具需求",
+  "description": "示例问卷，所有生成回答均为模拟数据。",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "你最常用哪种工具安排任务？",
+      "type": "single_choice",
+      "options": ["手机应用", "纸笔", "电脑软件", "其他"],
+      "weights_by_segment": {
+        "student": [4, 2, 2, 1],
+        "working_adult": [3, 2, 3, 1]
+      }
+    },
+    {
+      "id": "q2",
+      "text": "你对现在的工具满意吗？",
+      "type": "likert",
+      "options": ["非常不满意", "不满意", "一般", "满意", "非常满意"]
+    },
+    {
+      "id": "q3",
+      "text": "最希望改进什么？",
+      "type": "open_text"
+    }
+  ]
+}

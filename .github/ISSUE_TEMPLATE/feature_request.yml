@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a questionnaire or analysis workflow
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need to do?
+      description: Describe the classroom or research workflow; use fictional data only.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example input and expected result
