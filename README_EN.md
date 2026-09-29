@@ -2,6 +2,8 @@
 
 > Rehearse a survey before you send it.
 
+**[Try the live demo →](https://camel666666.github.io/respondent-lab/)** · [中文说明](README.md)
+
 Respondent Lab is an open-source workbench for **survey pretesting**. Set sample quotas for students and working adults, simulate a questionnaire, inspect distributions, and draft a transparent report. The included 1,000-person demo panel is entirely fictional.
 
 ## Quick start
