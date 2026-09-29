@@ -2,7 +2,7 @@
 
 > 在发出问卷之前，先看见可能的回答。
 
-[![CI](https://img.shields.io/badge/tests-pytest-7054ef)](#本地运行) [![Python](https://img.shields.io/badge/Python-3.10%2B-3670a0)](#本地运行) [![License](https://img.shields.io/badge/license-MIT-22a06b)](LICENSE) [![Data](https://img.shields.io/badge/demo%20data-100%25%20fictional-ef9e59)](#数据与研究边界)
+[![CI](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/camel666666/respondent-lab/actions/workflows/ci.yml) [![Python](https://img.shields.io/badge/Python-3.10%2B-3670a0)](#本地运行) [![License](https://img.shields.io/badge/license-MIT-22a06b)](LICENSE) [![Data](https://img.shields.io/badge/demo%20data-100%25%20fictional-ef9e59)](#数据与研究边界)
 
 Respondent Lab 是开源的**问卷预实验工具**。你可以按大学生和社会人士设置样本配额，运行模拟问卷，查看回答分布、分组差异和报告初稿。它适合课堂教学、题目预测试、研究假设探索，也能帮助团队在正式招募受访者前发现问卷设计问题。
 
@@ -22,7 +22,7 @@ python3 -m http.server 8000 --directory web
 
 浏览器打开 `http://localhost:8000`，点击“导入结果 JSON”，选择刚生成的 `result.json`。也可以只打开网页查看交互演示。
 
-仓库尚未发布时，直接在本目录运行：
+无需安装包时，也可以直接在仓库目录运行：
 
 ```bash
 PYTHONPATH=src python3 -m respondent_lab demo --sample-size 1000 --output result.json --report report.md
